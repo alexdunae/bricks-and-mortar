@@ -1,0 +1,88 @@
+///////////////////////////
+// Typekit
+///////////////////////////
+//                  font-family         font-weight   font-style
+//    Regular       "adobe-caslon-pro"  400           normal
+//    Italic        "adobe-caslon-pro"  400           italic
+//    Bold          "adobe-caslon-pro"  700           normal
+//    Bold Italic   "adobe-caslon-pro"  700           italic
+
+
+
+$base-font-size: 16px;
+
+$black: #231F20;
+$light-grey: #CACACA;
+
+
+@mixin serif($size: 100%, $line-height: 1) {
+  font: 400 normal $size/#{$line-height} 'adobe-caslon-pro', sans-serif;
+}
+
+@mixin serif-bold($size: 100%, $line-height: 1) {
+  font: 700 normal $size/#{$line-height} 'adobe-caslon-pro', sans-serif;
+}
+
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media all and (max-width: em(900px)) { @content; }
+  }
+  @else if $point == mobile {
+    @media all and (max-width: em(600px)) { @content; }
+  }
+  @else if $point == mobile-portrait {
+    @media all and (max-width: em(400px)) { @content; }
+  }
+}
+
+@function em($px, $base: $base-font-size) {
+  @return ($px / $base) * 1em;
+}
+
+%content-frame {
+  max-width: em(810px);
+  margin: 0 auto;
+  padding: em(114px);
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    max-width: none;
+  }
+}
+
+%clearfix {
+  &:before, &:after { display: table; content: ""; }
+  &:after { clear: both; }
+  *zoom: 1;
+}
+
+%visuallyhidden {
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+%visuallyhidden-focusable {
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  position: absolute;
+
+  &:active, &:focus {
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+  }
+}

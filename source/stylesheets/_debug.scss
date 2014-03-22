@@ -1,0 +1,15 @@
+.debug {
+  .site-body {
+    .content {
+      background: transparent image_url("grid.png") 0 0 repeat;
+    }
+  }
+
+  h1, h2, h3, h4, h5, .lede, blockquote, ul {
+    outline: 1px solid rgba(red, 0.5);
+  }
+
+  li {
+    outline: 1px solid rgba(blue, 0.5);
+  }
+}

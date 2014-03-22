@@ -1,0 +1,42 @@
+html, body { height: 100%; }
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: em(36px);
+  background: #fff image_url("splash-bg.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #fff;
+}
+
+.site-body {
+  .content {
+    @extend %content-frame;
+    text-align: center;
+  }
+}
+
+.member-list {
+  list-style: none;
+  margin: em(32px) em(-30px);
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0 em(30px);
+  }
+
+  a {
+    font-size: em(18px);
+    line-height: (32/18);
+    font-style: italic;
+  }
+}
