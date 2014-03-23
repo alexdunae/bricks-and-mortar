@@ -42,11 +42,21 @@ $light-grey: #CACACA;
 %content-frame {
   max-width: em(810px);
   margin: 0 auto;
-  padding: em(114px);
+  padding: em(96px) em(114px);
   text-align: center;
 
   @include breakpoint(tablet) {
     max-width: none;
+  }
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    padding: em(30px) em(54px);
+  }
+
+  @include breakpoint(mobile-portrait) {
+    max-width: none;
+    padding: em(18px) em(30px);
   }
 }
 

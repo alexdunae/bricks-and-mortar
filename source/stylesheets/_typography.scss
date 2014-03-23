@@ -32,9 +32,9 @@ h1 {
 }
 
 .backgroundclip h1.wordmark {
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
+  background-clip: text;
   background-image: image_url("splash-bg.jpg");
   background-size: auto 120%;
 }
@@ -50,4 +50,20 @@ p {
   margin: 0 0 em(32px,20px);
   font-size: em(20px);
   line-height: (32/20);
+}
+
+
+@include breakpoint(mobile) {
+  p { font-size: em(16px); }
+}
+
+
+@include breakpoint(mobile-portrait) {
+  h1 { font-size: em(24px); }
+
+  .backgroundclip h1.wordmark {
+    -webkit-text-fill-color: $black;
+    text-fill-color: $black;
+    background: none;
+  }
 }

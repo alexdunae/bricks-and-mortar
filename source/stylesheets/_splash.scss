@@ -1,4 +1,4 @@
-html, body { height: 100%; }
+html, body { min-height: 100%; }
 
 body {
   box-sizing: border-box;
@@ -12,7 +12,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  min-height: 100%;
   background: #fff;
 }
 
@@ -31,7 +31,7 @@ body {
   li {
     display: inline-block;
     margin: 0;
-    padding: 0 em(30px);
+    padding: 0 em(24px);
   }
 
   a {
@@ -39,4 +39,18 @@ body {
     line-height: (32/18);
     font-style: italic;
   }
+}
+
+
+@media all and (max-width: em(600px)), all and (max-height: em(660px)) {
+  .page { display: block;  }
+}
+
+@include breakpoint(mobile) {
+  body { padding: em(18px); }
+  .member-list li { display: block; }
+}
+
+@include breakpoint(mobile-portrait) {
+  body { padding: 0; background-image: none; }
 }
