@@ -6,6 +6,16 @@ set :images_dir, 'images'
 
 ignore '*.psd'
 
+helpers do
+  def inline_script(name)
+    js = sprockets["#{name}.js"].to_s
+
+    content_tag :script do
+      defined?(Uglifier) ? Uglifier.compile(js) : js
+    end
+  end
+end
+
 activate :autoprefixer do |config|
   config.browsers = ['> 1%', 'last 3 versions', 'ie 7', 'ie 8', 'ie 9', 'ff 17', 'opera 12.1']
 end
