@@ -1,4 +1,4 @@
-html, body { min-height: 100%; }
+html, body { height: 100%; }
 
 body {
   box-sizing: border-box;
@@ -41,8 +41,8 @@ body {
   }
 }
 
-
-@media all and (max-width: em(600px)), all and (max-height: em(660px)) {
+@media all and (max-width: em(600px)), all and (max-height: em(740px)) {
+  html, body { height: auto; }
   .page { display: block;  }
 }
 
