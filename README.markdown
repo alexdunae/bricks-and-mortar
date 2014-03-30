@@ -2,7 +2,7 @@
 
 In terminal:
 
-    cd ~/Sites/bricksandmortar
+    cd ~/Sites/bricks-and-mortar
     bundle
     bundle exec middleman server
 

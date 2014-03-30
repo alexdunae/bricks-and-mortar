@@ -2,14 +2,15 @@ body {
   min-width: 320px;
   margin: 0;
   @include serif($base-font-size, 2);
-  color: $black;
+  color: rgba($black ,0.75);
 }
 
 a {
-  color: $black;
+  color: rgba($black ,0.65);
   text-decoration: none;
   transition: 75ms color ease-out;
-  &:hover, &:focus { color: #000; }
+  letter-spacing: 1px;
+  &:hover, &:focus { color: rgba($black ,0.85); }
 }
 
 img {
@@ -23,6 +24,7 @@ h1 {
   @include serif-bold(em(36px), (48/36));
   letter-spacing: 0.4em;
   text-transform: uppercase;
+  margin-bottom: -24px;
 
   &.wordmark {
     span {
@@ -35,21 +37,22 @@ h1 {
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   background-clip: text;
-  background-image: image_url("splash-bg.jpg");
+  background-image: image_url("splash-bg-text.jpg");
   background-size: auto 120%;
 }
 
 h3 {
   margin: em(32px,12px) 0;
-  @include serif-bold(em(12px), (32/12));
-  letter-spacing: 3px;
+  @include serif-bold(em(14px), (32/12));
+  letter-spacing: 6px;
   text-transform: uppercase;
 }
 
 p {
   margin: 0 0 em(32px,20px);
-  font-size: em(20px);
+  font-size: em(18px);
   line-height: (32/20);
+  text-align:justify;
 }
 
 

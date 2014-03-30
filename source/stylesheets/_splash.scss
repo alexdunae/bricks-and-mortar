@@ -13,7 +13,9 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100%;
-  background: #fff;
+  background: rgba(255,255,255,0.93);
+  border-radius: 12px;
+
 }
 
 .site-body {
@@ -35,7 +37,7 @@ body {
   }
 
   a {
-    font-size: em(18px);
+    font-size: em(16px);
     line-height: (32/18);
     font-style: italic;
   }
