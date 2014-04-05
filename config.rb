@@ -1,8 +1,8 @@
 set :site_title, "Bricks & Mortar"
 
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
+set :css_dir, 'css'
+set :js_dir, 'js'
+set :images_dir, 'img'
 
 ignore '*.psd'
 

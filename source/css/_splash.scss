@@ -1,11 +1,15 @@
 html, body { height: 100%; }
 
+html {
+  background: #fff image_url("splash-bg.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
+  min-height: 100%;
   padding: em(36px);
-  background: #fff image_url("splash-bg.jpg") 50% 50% no-repeat;
-  background-size: cover;
 }
 
 .page {
@@ -15,7 +19,6 @@ body {
   min-height: 100%;
   background: rgba(255,255,255,0.93);
   border-radius: 12px;
-
 }
 
 .site-body {
@@ -43,10 +46,6 @@ body {
   }
 }
 
-@media all and (max-width: em(600px)), all and (max-height: em(740px)) {
-  html, body { height: auto; }
-  .page { display: block;  }
-}
 
 @include breakpoint(mobile) {
   body { padding: em(18px); }
