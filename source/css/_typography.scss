@@ -33,11 +33,13 @@ h1 {
   }
 }
 
-.backgroundclip h1.wordmark {
+h1.wordmark {
+  // http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
+  background: -webkit-linear-gradient(transparent, transparent), image_url("splash-bg-text.jpg");
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   background-clip: text;
-  background-image: image_url("splash-bg-text.jpg");
+
   background-size: auto 120%;
 }
 
