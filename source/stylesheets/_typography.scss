@@ -52,7 +52,8 @@ p {
   margin: 0 0 em(32px,20px);
   font-size: em(18px);
   line-height: (32/20);
-  text-align:justify;
+  text-align: justify;
+  a { letter-spacing: 0; }
 }
 
 
