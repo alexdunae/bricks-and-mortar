@@ -30,8 +30,8 @@ end
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :rsync
-  deploy.host = "dialect.ca"
-  deploy.path = "/home/dialect/bricks.dialect.ca"
+  deploy.host = "dialectic"
+  deploy.path = "/home/dialect/bricks-and-mortar/current"
   deploy.user = "dialect"
   deploy.clean = true
 end
