@@ -13,10 +13,12 @@ BAM.resizeFrame = ->
   margin = parseInt(document.defaultView.getComputedStyle(BAM.page, null).getPropertyValue('margin-top'), 10) * 2
   page.style.minHeight = "#{window.innerHeight - margin}px"
 
-window.onresize = ->
-  BAM.resizeFrame()
-
 window.onload = ->
   BAM.initDebug()
-  BAM.resizeFrame()
-  window.setTimeout(BAM.resizeFrame, 600)
+
+  if Modernizr.flexbox
+    window.onresize = ->
+      BAM.resizeFrame()
+
+    BAM.resizeFrame()
+    window.setTimeout(BAM.resizeFrame, 600)
