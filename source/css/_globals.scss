@@ -16,11 +16,11 @@ $light-grey: #CACACA;
 
 
 @mixin serif($size: 100%, $line-height: 1) {
-  font: 400 normal $size/#{$line-height} 'adobe-caslon-pro', sans-serif;
+  font: 400 normal $size/#{$line-height} 'adobe-caslon-pro', georgia, serif;
 }
 
 @mixin serif-bold($size: 100%, $line-height: 1) {
-  font: 700 normal $size/#{$line-height} 'adobe-caslon-pro', sans-serif;
+  font: 700 normal $size/#{$line-height} 'adobe-caslon-pro', georgia, serif;
 }
 
 @mixin breakpoint($point) {
