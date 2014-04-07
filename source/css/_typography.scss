@@ -12,7 +12,7 @@ a {
   text-decoration: none;
   transition: 75ms color ease-out;
   letter-spacing: 1px;
-  &:hover, &:focus { color: rgba($black ,0.85); }
+  &:hover, &:focus { color: rgba($black ,0.85); text-decoration: underline; }
 }
 
 img {
